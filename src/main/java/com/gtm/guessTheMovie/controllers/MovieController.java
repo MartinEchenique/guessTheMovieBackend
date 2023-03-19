@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MovieController {
-    private MovieDao movieDAO = new MovieDao();
+    @Autowired
+    private MovieDao movieDAO;
     @Autowired
     private RatingDao ratingDAO;
     @CrossOrigin("*")
